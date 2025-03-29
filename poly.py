@@ -154,7 +154,7 @@ class LinkedList:
             if a.exp > b.exp:
                 result.insert_term(a.coeff, a.exp)
                 a = a.next
-            elif a .exp < b.exp:
+            elif a.exp < b.exp:
                 result.insert_term(b.coeff, b.exp)
                 b = b.next
             else:
@@ -217,6 +217,16 @@ def main():
     i += 1
     for _ in range(n):
         coeff, exp = map(int, input_lines[i].split())
+        q.insert_term(coeff, exp)
+        i += 1
+
+    while I < len(inut_lines) and input_lines[I].sttip() == "":
+        i += 1
+
+    m = int(input_lines[I])
+    i == 1
+    for _ in range(m):
+        coeff, exp = map(int, input_lines[I].split())
         q.insert_term(coeff, exp)
         i += 1
 
