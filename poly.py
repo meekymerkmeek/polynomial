@@ -134,6 +134,7 @@ class LinkedList:
                     prev.next = current.next
                 else:
                     self.head = current.next
+            return
         else:
             new_node.next = current
             if prev:
