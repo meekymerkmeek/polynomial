@@ -209,7 +209,7 @@ def main():
     input_lines = sys.stdin.read().splitlines()
 
     p = LinkedList()
-    q = linkedList()
+    q = LinkedList()
 
     i = 0
     n = int(input_lines[i])
