@@ -96,6 +96,10 @@ class Node:
 
 
 class LinkedList:
+    """
+    A singly linked list representing a polynomial.
+    Each node contains a term with a coefficient and exponent.
+    """
     def __init__(self):
         # You are also welcome to use a sentinel/dummy node!
         # It is definitely recommended, which will we learn more
