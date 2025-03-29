@@ -183,16 +183,20 @@ class LinkedList:
         Return a new LinkedList representing the product.
         """
         result = LinkedList()
-        a = self.head
+        term_a = self.head
 
-        while a:
-            temp = LinkedList()
-            b = p.head
-            while b:
-                temp.insert_term(a.coeff * b.coeff, a.exp + b.exp)
-                b = b.next
-            result = result.add(temp)
-            a = a.next     
+        while term_a:
+            temp_poly = LinkedList()
+            term_b = p.head
+
+        while term_b:
+            product_coeff = term_a.coeff * term_b.coeff
+            product_exp = term_a.exp + term_b.exp
+            temp_poly.insert_term(product_coeff, product_exp)
+            term_b = term_b.next
+
+        result = result.add(temp_poly)
+        term_a = term_a.next
         return result
 
     # Return a string representation of the polynomial.
