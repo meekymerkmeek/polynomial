@@ -113,7 +113,6 @@ class LinkedList:
     def insert_term(self, coeff, exp):
         if coeff == 0:
             return
-        
         new_node = Node(coeff, exp)
 
         if not self.head or self.head.exp < exp:
@@ -141,9 +140,6 @@ class LinkedList:
                 prev.next = new_node
             else:
                 self.head = new_node
-            
-        
-
     # Add a polynomial p to the polynomial and return the resulting polynomial as a new linked list.
     def add(self, p):
         result = LinkedList()
@@ -184,8 +180,7 @@ class LinkedList:
                 temp.insert_term(a.coeff * b.coeff, a.exp + b.exp)
                 b = b.next
             result = result.add(temp)
-            a = a.next
-            
+            a = a.next     
         return result
 
     # Return a string representation of the polynomial.
@@ -206,8 +201,13 @@ def main():
     # get sum of p and q as a new linked list and print sum
 
     # get product of p and q as a new linked list and print product
-    import sys
-    input_lines = sys.stdin.read().splitlines()
+    input_lines = []
+    try:
+        while True:
+            line = input()
+            input_lines.append(line)
+    except EOFError:
+        pass
 
     p = LinkedList()
     q = LinkedList()
@@ -220,13 +220,13 @@ def main():
         q.insert_term(coeff, exp)
         i += 1
 
-    while I < len(inut_lines) and input_lines[I].sttip() == "":
+    while I < len(input_lines) and input_lines[i].sttip() == "":
         i += 1
 
     m = int(input_lines[I])
-    i == 1
+    i += 1
     for _ in range(m):
-        coeff, exp = map(int, input_lines[I].split())
+        coeff, exp = map(int, input_lines[i].split())
         q.insert_term(coeff, exp)
         i += 1
 
