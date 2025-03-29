@@ -220,10 +220,10 @@ def main():
         q.insert_term(coeff, exp)
         i += 1
 
-    while I < len(input_lines) and input_lines[i].sttip() == "":
+    while i < len(input_lines) and input_lines[i].sttip() == "":
         i += 1
 
-    m = int(input_lines[I])
+    m = int(input_lines[i])
     i += 1
     for _ in range(m):
         coeff, exp = map(int, input_lines[i].split())
