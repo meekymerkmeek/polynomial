@@ -189,6 +189,8 @@ class LinkedList:
             temp = LinkedList()
             b = p.head
             while b:
+                product_coeff * b.coeff
+                product_exp = a.exp + b.exp
                 temp.insert_term(a.coeff * b.coeff, a.exp + b.exp)
                 b = b.next
             result = result.add(temp)
