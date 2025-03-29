@@ -246,8 +246,8 @@ def main():
     sum_poly = p.add(q)
     prod_poly = p.mult(q)
 
-    print(sum_poly)
-    print(prod_poly)
+    print(str(sum_poly))
+    print(str(prod_poly))
 
 
 
