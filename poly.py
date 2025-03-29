@@ -232,7 +232,7 @@ def main():
     i += 1
     for _ in range(n):
         coeff, exp = map(int, input_lines[i].split())
-        q.insert_term(coeff, exp)
+        p.insert_term(coeff, exp)
         i += 1
 
     while i < len(input_lines) and input_lines[i].strip() == "":
