@@ -188,7 +188,7 @@ class LinkedList:
             temp_list = LinkedList()
             new_temp = p.head
             while new_temp:
-                temp_list.insert_term(term.coeff * new_term.coeff, temp.exp + new_temp.exp)
+                temp_list.insert_term(temp.coeff * new_temp.coeff, temp.exp + new_temp.exp)
                 new_temp = new_temp.next
             new_list = new_list.add(temp_list)
             temp = temp.next
