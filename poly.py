@@ -214,7 +214,7 @@ def main():
     i = 0
     n = int(input_lines[i])
     i += 1
-    for _ in range(m):
+    for _ in range(n):
         coeff, exp = map(int, input_lines[i].split())
         q.insert_term(coeff, exp)
         i += 1
