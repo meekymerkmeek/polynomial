@@ -182,34 +182,31 @@ class LinkedList:
         Multiply the current polynomial with another.
         Return a new LinkedList representing the product.
         """
-        result = LinkedList()
-        a = self.head
-
-        while a:
-            temp = LinkedList()
-            b = p.head
-            while b:
-                product_coeff * b.coeff
-                product_exp = a.exp + b.exp
-                temp.insert_term(a.coeff * b.coeff, a.exp + b.exp)
-                b = b.next
-            result = result.add(temp)
-            a = a.next
-        return result
-
+        new_list = LinkedList()
+        temp = self.head
+        while temp:
+            temp_list = LinkedList()
+            new_temp = p.head
+            while new_temp:
+                temp_list.insert_term(term.coeff * new_term.coeff, temp.exp + new_temp.exp)
+                new_temp = new_temp.next
+            new_list = new_list.add(temp_list)
+            temp = temp.next
+        return new_list
     # Return a string representation of the polynomial.
     def __str__(self):
         """
         Return a string representation of the polynomial.
         Format: (coeff, exp) + (coeff, exp) ...
         """
-        terms = []
-        current = self.head
-        while current:
-            terms.append(str(current))
-            current = current.next
-        return " + ".join(terms)
-
+        current_temp = self.head
+        result = ""
+        while current_temp:
+            if result:
+                result += " + "
+            result += f"({current_temp.coeff}, {current_temp.exp})"
+            current_temp = current_temp.next
+        return result
 
 def main():
     """
