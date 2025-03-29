@@ -139,11 +139,11 @@ class LinkedList:
                 else:
                     self.head = current.next
             return
-            new_node.next = current
-            if prev:
-                prev.next = new_node
-            else:
-                self.head = new_node
+        new_node.next = current
+        if prev:
+            prev.next = new_node
+        else:
+            self.head = new_node
     # Add a polynomial p to the polynomial and return the resulting polynomial as a new linked list.
     def add(self, p):
         """
