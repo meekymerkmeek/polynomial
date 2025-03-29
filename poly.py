@@ -111,6 +111,11 @@ class LinkedList:
     # If a term with that exponent already exists, add the coefficients together.
     # You must keep the terms in descending order by exponent.
     def insert_term(self, coeff, exp):
+        """
+        Insert a term into the polynomial in descending order by exponent.
+        If a term with the same exponent exists, sum the coefficients.
+        Remove term if the resulting coefficient is zero.
+        """
         if coeff == 0:
             return
         new_node = Node(coeff, exp)
@@ -134,7 +139,6 @@ class LinkedList:
                 else:
                     self.head = current.next
             return
-        else:
             new_node.next = current
             if prev:
                 prev.next = new_node
@@ -142,6 +146,10 @@ class LinkedList:
                 self.head = new_node
     # Add a polynomial p to the polynomial and return the resulting polynomial as a new linked list.
     def add(self, p):
+        """
+        Add another polynomial to the current one.
+        Return a new LinkedList representing the sum.
+        """
         result = LinkedList()
         a = self.head
         b = p.head
@@ -170,6 +178,10 @@ class LinkedList:
 
     # Multiply a polynomial p with the polynomial and return the product as a new linked list.
     def mult(self, p):
+        """
+        Multiply the current polynomial with another.
+        Return a new LinkedList representing the product.
+        """
         result = LinkedList()
         a = self.head
 
@@ -185,6 +197,10 @@ class LinkedList:
 
     # Return a string representation of the polynomial.
     def __str__(self):
+        """
+        Return a string representation of the polynomial.
+        Format: (coeff, exp) + (coeff, exp) ...
+        """
         terms = []
         current = self.head
         while current:
@@ -194,13 +210,10 @@ class LinkedList:
 
 
 def main():
-    # read data from stdin (terminal/file) using input() and create polynomial p
-
-    # read data from stdin (terminal/file) using input() and create polynomial q
-
-    # get sum of p and q as a new linked list and print sum
-
-    # get product of p and q as a new linked list and print product
+    """
+    Reads two polynomials from input, computes and prints their sum and product.
+    Input format follows assignment specification.
+    """
     input_lines = []
     try:
         while True:
@@ -220,7 +233,7 @@ def main():
         q.insert_term(coeff, exp)
         i += 1
 
-    while i < len(input_lines) and input_lines[i].sttip() == "":
+    while i < len(input_lines) and input_lines[i].strip() == "":
         i += 1
 
     m = int(input_lines[i])
